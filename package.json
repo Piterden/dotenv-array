@@ -1,19 +1,28 @@
 {
   "name": "dotenv-array",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parse delimiter separated values from env to array.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "array",
+    "check",
+    "convert",
+    "dot",
     "dotenv",
     "env",
-    "array",
-    "comma"
+    "parse",
+    "variables"
   ],
+  "bugs": "https://github.com/Piterden/dotenv-array/issues",
+  "repository": "https://github.com/Piterden/dotenv-array",
   "author": "Denis Efremov <efremov.a.denis@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">= 6.x"
+  },
   "dependencies": {
     "dotenv": "^6.0.0"
   }
