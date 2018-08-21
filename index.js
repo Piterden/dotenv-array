@@ -1,10 +1,7 @@
 require('dotenv').load()
 
 
-module.exports = ({ override, delimiter } = {
-  override: true,
-  delimiter: ',',
-}) => {
+module.exports = (delimiter = ',') => {
   const update = (value) => {
     let match
     const delim = delimiter.charAt(0)
@@ -16,12 +13,13 @@ module.exports = ({ override, delimiter } = {
         return match[1]
       }
 
-      match = value.trim()
-        .match(new RegExp(`^(?:[^${delim}]+\${delim})*[^${delim}]+$`))
+      match = value.match(new RegExp(`^(?:[^\\${delim}]+\\${delim})+[^\\${delim}]+$`))
 
       if (match) {
         return value.split(delim)
       }
+
+      return value
     }
 
     return value
@@ -29,10 +27,6 @@ module.exports = ({ override, delimiter } = {
 
   return Object.keys(process.env).reduce((acc, key) => {
     const updated = update(process.env[key])
-
-    if (override) {
-      process.env[key] = updated
-    }
 
     acc[key] = updated
 
