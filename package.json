@@ -1,0 +1,20 @@
+{
+  "name": "dotenv-array",
+  "version": "0.0.1",
+  "description": "Parse delimiter separated values from env to array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dotenv",
+    "env",
+    "array",
+    "comma"
+  ],
+  "author": "Denis Efremov <efremov.a.denis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  }
+}
