@@ -1,6 +1,6 @@
 {
   "name": "dotenv-array",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Parse delimiter separated values from env to array.",
   "main": "index.js",
   "scripts": {

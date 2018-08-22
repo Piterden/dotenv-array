@@ -19,3 +19,5 @@ const env = require('dotenv-array')()
 // or
 process.env = require('dotenv-array')()
 ```
+
+The environment variable values wrapped with backticks `(`)` or ends with star `(*)` are excluded from the parse process.
